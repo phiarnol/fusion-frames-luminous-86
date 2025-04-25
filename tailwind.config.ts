@@ -63,14 +63,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated sophisticated colors
-				midnight: '#1A1F2C',
-				cyan: '#7EADCF',
-				gold: '#C8B273',
-				charcoal: '#403E43',
-				silver: '#9F9EA1',
-				darkgray: '#222222',
-				lightgray: '#AAADB0',
+				// Custom colors for Fusion Frames
+				midnight: '#191970',
+				cyan: '#00FFFF',
+				gold: '#FFD700',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -88,31 +84,31 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': { 
-						textShadow: '0 0 5px rgba(126, 173, 207, 0.5), 0 0 10px rgba(126, 173, 207, 0.3)' 
+						textShadow: '0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.5)' 
 					},
 					'50%': { 
-						textShadow: '0 0 10px rgba(126, 173, 207, 0.7), 0 0 15px rgba(126, 173, 207, 0.5)' 
+						textShadow: '0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.8)' 
 					},
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-5px)' }
+					'50%': { transform: 'translateY(-10px)' }
 				},
-				'pulse-light': {
-					'0%, 100%': { boxShadow: '0 0 0 0 rgba(126, 173, 207, 0)' },
-					'50%': { boxShadow: '0 0 0 5px rgba(126, 173, 207, 0.2)' }
+				'pulse-cyan': {
+					'0%, 100%': { boxShadow: '0 0 0 0 rgba(0, 255, 255, 0)' },
+					'50%': { boxShadow: '0 0 0 10px rgba(0, 255, 255, 0.3)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'glow': 'glow 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-light': 'pulse-light 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+				'pulse-cyan': 'pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			},
 			backgroundImage: {
-				'grid-pattern': 'linear-gradient(to right, rgba(126, 173, 207, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(126, 173, 207, 0.05) 1px, transparent 1px)',
-				'hero-gradient': 'radial-gradient(circle at top right, rgba(126, 173, 207, 0.08), rgba(26, 31, 44, 0) 70%)'
+				'grid-pattern': 'linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px)',
+				'hero-gradient': 'radial-gradient(circle at top right, rgba(0, 255, 255, 0.15), rgba(25, 25, 112, 0) 70%)'
 			},
 		}
 	},
