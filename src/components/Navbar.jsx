@@ -60,12 +60,7 @@ const Navbar = () => {
   );
 };
 
-interface NavLinksProps {
-  className?: string;
-  onClick?: () => void;
-}
-
-const NavLinks = ({ className, onClick }: NavLinksProps) => (
+const NavLinks = ({ className, onClick }) => (
   <div className={cn("text-white", className)}>
     <Link 
       to="/" 
