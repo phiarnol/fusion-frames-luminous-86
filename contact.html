@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Fusion Frames</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="app" class="min-h-screen bg-midnight">
+    <!-- Navigation -->
+    <nav class="w-full fixed top-0 z-50 backdrop-blur-md bg-midnight-80 border-b border-cyan-20">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-center">
+          <span class="text-2xl font-bold text-white animate-glow">
+            FUSION<span class="text-cyan">FRAMES</span>
+          </span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <div class="text-white flex gap-8">
+            <a href="index.html" class="hover-cyan transition-colors duration-200 relative group">
+              Home
+              <span class="nav-underline"></span>
+            </a>
+            <a href="services.html" class="hover-cyan transition-colors duration-200 relative group">
+              Services
+              <span class="nav-underline"></span>
+            </a>
+            <a href="contact.html" class="hover-cyan transition-colors duration-200 relative group text-cyan">
+              Contact
+              <span class="nav-underline"></span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="index.html" class="hidden md:block">
+          <img src="logo.png" alt="Fusion Frames Logo" class="h-12 w-auto">
+        </a>
+        
+        <button id="menu-toggle" class="md:hidden text-white hover-cyan focus-outline-none" aria-label="Toggle menu">
+          <i class="fas fa-bars" id="menu-icon-open"></i>
+          <i class="fas fa-times hidden" id="menu-icon-close"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-midnight border-b border-cyan-20 hidden">
+        <div class="container mx-auto px-4 py-4">
+          <div class="flex flex-col gap-4">
+            <a href="index.html" class="text-white hover-cyan transition-colors duration-200 relative group">
+              Home
+              <span class="nav-underline"></span>
+            </a>
+            <a href="services.html" class="text-white hover-cyan transition-colors duration-200 relative group">
+              Services
+              <span class="nav-underline"></span>
+            </a>
+            <a href="contact.html" class="text-white hover-cyan transition-colors duration-200 relative group text-cyan">
+              Contact
+              <span class="nav-underline"></span>
+            </a>
+          </div>
+          <div class="mt-4 flex justify-center">
+            <img src="logo.png" alt="Fusion Frames Logo" class="h-10 w-auto">
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content with top padding for navbar -->
+    <div style="padding-top: 80px;">
+      <!-- Page Header -->
+      <section class="py-20 bg-midnight relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid z-0"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+              Contact <span class="text-cyan animate-glow">Us</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+              Ready to start your project? Get in touch with our team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="py-20 bg-midnight">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+              <div class="relative z-10">
+                <h3 class="text-2xl font-semibold mb-6 text-white">Send us a Message</h3>
+                
+                <form id="contact-form" class="space-y-6">
+                  <div class="form-group">
+                    <label for="name" class="block text-gray-300 mb-2">Name</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      class="w-full bg-midnight border border-cyan-20 rounded-md p-3 text-white focus:border-cyan focus:outline-none"
+                      placeholder="Your name"
+                      required
+                    >
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="email" class="block text-gray-300 mb-2">Email</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      class="w-full bg-midnight border border-cyan-20 rounded-md p-3 text-white focus:border-cyan focus:outline-none"
+                      placeholder="Your email address"
+                      required
+                    >
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="service" class="block text-gray-300 mb-2">Service Interested In</label>
+                    <select 
+                      id="service" 
+                      name="service" 
+                      class="w-full bg-midnight border border-cyan-20 rounded-md p-3 text-white focus:border-cyan focus:outline-none"
+                      required
+                    >
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="video-editing">Video Editing</option>
+                      <option value="post-production">Post-Production</option>
+                      <option value="content-creation">Content Creation</option>
+                      <option value="motion-graphics">Motion Graphics</option>
+                      <option value="audio-editing">Audio Editing</option>
+                      <option value="vfx-3d">VFX & 3D Animation</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="message" class="block text-gray-300 mb-2">Message</label>
+                    <textarea 
+                      id="message" 
+                      name="message" 
+                      rows="6" 
+                      class="w-full bg-midnight border border-cyan-20 rounded-md p-3 text-white focus:border-cyan focus:outline-none"
+                      placeholder="Tell us about your project"
+                      required
+                    ></textarea>
+                  </div>
+                  
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary w-full py-4">
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <div class="space-y-8">
+              <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gold-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-semibold mb-6 text-white">Contact Information</h3>
+                  
+                  <div class="space-y-6">
+                    <div class="flex items-start">
+                      <div class="mt-1 w-10 h-10 rounded-full bg-cyan-10 flex items-center justify-center text-cyan mr-4">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-lg font-medium text-white mb-1">Email Us</h4>
+                        <a href="mailto:info@fusionframes.com" class="text-gray-300 hover-text-cyan transition-colors">
+                          info@fusionframes.com
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                      <div class="mt-1 w-10 h-10 rounded-full bg-cyan-10 flex items-center justify-center text-cyan mr-4">
+                        <i class="fas fa-phone-alt"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-lg font-medium text-white mb-1">Call Us</h4>
+                        <a href="tel:+1234567890" class="text-gray-300 hover-text-cyan transition-colors">
+                          (123) 456-7890
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                      <div class="mt-1 w-10 h-10 rounded-full bg-cyan-10 flex items-center justify-center text-cyan mr-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-lg font-medium text-white mb-1">Office</h4>
+                        <address class="text-gray-300 not-italic">
+                          123 Creative Street<br>
+                          Suite 101<br>
+                          Los Angeles, CA 90001
+                        </address>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-semibold mb-6 text-white">Business Hours</h3>
+                  
+                  <div class="space-y-2">
+                    <div class="flex justify-between">
+                      <span class="text-gray-300">Monday - Friday</span>
+                      <span class="text-white">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-300">Saturday</span>
+                      <span class="text-white">10:00 AM - 4:00 PM</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-gray-300">Sunday</span>
+                      <span class="text-white">Closed</span>
+                    </div>
+                  </div>
+                  
+                  <div class="mt-6 text-gray-300">
+                    <p>Need urgent assistance? Email us at <a href="mailto:urgent@fusionframes.com" class="text-cyan hover-text-cyan transition-colors">urgent@fusionframes.com</a> for priority support.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media Section -->
+          <div class="mt-16 text-center">
+            <h3 class="text-2xl font-semibold mb-6 text-white">Follow Us</h3>
+            <div class="flex justify-center space-x-6">
+              <a href="#" class="w-12 h-12 rounded-full bg-midnight border border-cyan-30 flex items-center justify-center text-white hover-text-cyan hover:border-cyan transition-colors duration-300">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 rounded-full bg-midnight border border-cyan-30 flex items-center justify-center text-white hover-text-cyan hover:border-cyan transition-colors duration-300">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 rounded-full bg-midnight border border-cyan-30 flex items-center justify-center text-white hover-text-cyan hover:border-cyan transition-colors duration-300">
+                <i class="fab fa-youtube text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 rounded-full bg-midnight border border-cyan-30 flex items-center justify-center text-white hover-text-cyan hover:border-cyan transition-colors duration-300">
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map Section (Placeholder) -->
+      <section class="py-10 bg-gradient-to-b from-midnight to-midnight-deep">
+        <div class="container mx-auto px-4">
+          <div class="relative rounded-xl overflow-hidden h-80 border border-cyan-20">
+            <!-- This would be a real map in a production environment -->
+            <div class="absolute inset-0 flex items-center justify-center bg-midnight">
+              <div class="text-center">
+                <i class="fas fa-map-marked-alt text-cyan text-4xl mb-4"></i>
+                <h3 class="text-xl text-white mb-2">Find Us</h3>
+                <p class="text-gray-300">Map would be displayed here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-midnight border-t border-cyan-20 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">
+              FUSION<span class="text-cyan">FRAMES</span>
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Transforming ordinary footage into extraordinary stories with cutting-edge video editing technology.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="footer-link">Home</a>
+              </li>
+              <li>
+                <a href="services.html" class="footer-link">Services</a>
+              </li>
+              <li>
+                <a href="contact.html" class="footer-link">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Projects</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">About Us</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center text-gray-300 hover-text-cyan">
+                <i class="fas fa-envelope text-cyan mr-2"></i>
+                <a href="mailto:info@fusionframes.com">info@fusionframes.com</a>
+              </li>
+              <li class="flex items-center text-gray-300 hover-text-cyan">
+                <i class="fas fa-phone-alt text-cyan mr-2"></i>
+                <a href="tel:+1234567890">(123) 456-7890</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-cyan-10">
+          <p class="text-center text-gray-400 text-sm">
+            © <span id="current-year"></span> Fusion Frames. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Additional JavaScript for contact form -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current year in footer from main.js
+      
+      // Handle contact form submission
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form values
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const service = document.getElementById('service').value;
+          const message = document.getElementById('message').value;
+          
+          // In a real implementation, you would send this data to a server
+          console.log('Form submitted:', { name, email, service, message });
+          
+          // Show success message
+          const formContainer = contactForm.parentNode;
+          
+          // Store original form content
+          const originalContent = formContainer.innerHTML;
+          
+          // Replace with success message
+          formContainer.innerHTML = `
+            <div class="text-center py-8">
+              <i class="fas fa-check-circle text-cyan text-5xl mb-4"></i>
+              <h3 class="text-2xl font-semibold text-white mb-2">Message Sent!</h3>
+              <p class="text-gray-300 mb-6">Thank you for contacting us. We'll get back to you shortly.</p>
+              <button id="reset-form" class="btn btn-primary">Send Another Message</button>
+            </div>
+          `;
+          
+          // Add event listener to reset form
+          const resetButton = document.getElementById('reset-form');
+          if (resetButton) {
+            resetButton.addEventListener('click', function() {
+              formContainer.innerHTML = originalContent;
+              
+              // Reattach the submit event listener to the new form
+              const newForm = document.getElementById('contact-form');
+              if (newForm) {
+                newForm.addEventListener('submit', arguments.callee);
+              }
+            });
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Include main JavaScript file -->
+  <script src="main.js"></script>
+</body>
+</html>

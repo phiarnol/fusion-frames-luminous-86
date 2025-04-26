@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Fusion Frames</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="app" class="min-h-screen bg-midnight">
+    <!-- Navigation -->
+    <nav class="w-full fixed top-0 z-50 backdrop-blur-md bg-midnight-80 border-b border-cyan-20">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-center">
+          <span class="text-2xl font-bold text-white animate-glow">
+            FUSION<span class="text-cyan">FRAMES</span>
+          </span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <div class="text-white flex gap-8">
+            <a href="index.html" class="hover-cyan transition-colors duration-200 relative group">
+              Home
+              <span class="nav-underline"></span>
+            </a>
+            <a href="services.html" class="hover-cyan transition-colors duration-200 relative group text-cyan">
+              Services
+              <span class="nav-underline"></span>
+            </a>
+            <a href="contact.html" class="hover-cyan transition-colors duration-200 relative group">
+              Contact
+              <span class="nav-underline"></span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="index.html" class="hidden md:block">
+          <img src="logo.png" alt="Fusion Frames Logo" class="h-12 w-auto">
+        </a>
+        
+        <button id="menu-toggle" class="md:hidden text-white hover-cyan focus-outline-none" aria-label="Toggle menu">
+          <i class="fas fa-bars" id="menu-icon-open"></i>
+          <i class="fas fa-times hidden" id="menu-icon-close"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-midnight border-b border-cyan-20 hidden">
+        <div class="container mx-auto px-4 py-4">
+          <div class="flex flex-col gap-4">
+            <a href="index.html" class="text-white hover-cyan transition-colors duration-200 relative group">
+              Home
+              <span class="nav-underline"></span>
+            </a>
+            <a href="services.html" class="text-white hover-cyan transition-colors duration-200 relative group text-cyan">
+              Services
+              <span class="nav-underline"></span>
+            </a>
+            <a href="contact.html" class="text-white hover-cyan transition-colors duration-200 relative group">
+              Contact
+              <span class="nav-underline"></span>
+            </a>
+          </div>
+          <div class="mt-4 flex justify-center">
+            <img src="logo.png" alt="Fusion Frames Logo" class="h-10 w-auto">
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content with top padding for navbar -->
+    <div style="padding-top: 80px;">
+      <!-- Page Header -->
+      <section class="py-20 bg-midnight relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid z-0"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our <span class="text-cyan animate-glow">Services</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+              Expert video editing and post-production services to bring your vision to life
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Services Section -->
+      <section class="py-20 bg-midnight">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-16 h-16 rounded-full bg-cyan-10 flex items-center justify-center mb-6 text-cyan">
+                  <i class="fas fa-edit text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Video Editing</h3>
+                <p class="text-gray-300 mb-4">
+                  Our professional video editing services transform raw footage into polished, engaging content tailored to your specific needs. We specialize in seamless transitions, precise cuts, and compelling storytelling.
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Timeline editing and scene arrangement
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Color grading and correction
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Transitions and effects
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Audio synchronization
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-16 h-16 rounded-full bg-cyan-10 flex items-center justify-center mb-6 text-cyan">
+                  <i class="fas fa-film text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Post-Production</h3>
+                <p class="text-gray-300 mb-4">
+                  Our comprehensive post-production workflow takes your content to the next level with professional finishing touches that enhance visual appeal and storytelling impact.
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Sound design and audio mixing
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Visual effects integration
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Titling and graphics
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Final mastering and delivery
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-16 h-16 rounded-full bg-cyan-10 flex items-center justify-center mb-6 text-cyan">
+                  <i class="fas fa-camera text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Content Creation</h3>
+                <p class="text-gray-300 mb-4">
+                  From concept to completion, our content creation services help you develop engaging video content that resonates with your audience and achieves your communication goals.
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Social media content
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Brand storytelling
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Marketing videos
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Creative direction
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-16 h-16 rounded-full bg-cyan-10 flex items-center justify-center mb-6 text-cyan">
+                  <i class="fas fa-tv text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Motion Graphics</h3>
+                <p class="text-gray-300 mb-4">
+                  Our motion graphics add dynamic visual elements to your videos, enhancing engagement and helping to communicate complex ideas in an accessible, visually appealing way.
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    2D and 3D animations
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Animated logos and branding
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Kinetic typography
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Infographic animations
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-16 h-16 rounded-full bg-cyan-10 flex items-center justify-center mb-6 text-cyan">
+                  <i class="fas fa-music text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Audio Editing</h3>
+                <p class="text-gray-300 mb-4">
+                  Great visuals deserve great sound. Our audio editing services ensure your videos sound as professional as they look, with clean, balanced audio that enhances the viewing experience.
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Audio cleanup and restoration
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Music selection and licensing
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Voice-over recording and editing
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Sound design and effects
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="p-8 border border-cyan-20 rounded-xl bg-gradient-to-br from-midnight to-midnight/80 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-5 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-16 h-16 rounded-full bg-cyan-10 flex items-center justify-center mb-6 text-cyan">
+                  <i class="fas fa-code text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">VFX & 3D Animation</h3>
+                <p class="text-gray-300 mb-4">
+                  Our visual effects and 3D animation services bring imagination to reality, creating immersive visual experiences that captivate audiences and elevate your content.
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    3D modeling and animation
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Visual effects compositing
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Green screen keying
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-check text-cyan mr-2"></i>
+                    Virtual environments
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <a href="contact.html" class="btn btn-primary btn-lg">Get a Quote</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="py-20 bg-gradient-to-b from-midnight to-midnight-deep">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Our <span class="text-gold">Process</span>
+            </h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">
+              We follow a structured approach to ensure your project is completed efficiently and meets your expectations
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="process-step">
+              <div class="process-number">01</div>
+              <h3 class="text-xl font-semibold mb-3 text-white">Consultation</h3>
+              <p class="text-gray-300">
+                We begin with a thorough consultation to understand your goals, vision, and requirements for your video project.
+              </p>
+            </div>
+            
+            <div class="process-step">
+              <div class="process-number">02</div>
+              <h3 class="text-xl font-semibold mb-3 text-white">Planning</h3>
+              <p class="text-gray-300">
+                We develop a detailed project plan including timelines, deliverables, and creative direction based on your input.
+              </p>
+            </div>
+            
+            <div class="process-step">
+              <div class="process-number">03</div>
+              <h3 class="text-xl font-semibold mb-3 text-white">Production</h3>
+              <p class="text-gray-300">
+                Our team works diligently on your project, applying our technical expertise and creative skills to bring your vision to life.
+              </p>
+            </div>
+            
+            <div class="process-step">
+              <div class="process-number">04</div>
+              <h3 class="text-xl font-semibold mb-3 text-white">Delivery</h3>
+              <p class="text-gray-300">
+                After revisions and final approval, we deliver your completed project in the formats you need for your specific platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 bg-midnight relative overflow-hidden">
+        <!-- Decorative backgrounds -->
+        <div class="absolute inset-0 bg-grid opacity-30"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold-5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Ready to bring your <span class="text-cyan animate-glow">vision</span> to life?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+              Let's create something extraordinary together. Contact us today to discuss your project and get started.
+            </p>
+            <a href="contact.html" class="btn btn-primary btn-lg flex items-center justify-center mx-auto">
+              Contact Us <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-midnight border-t border-cyan-20 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">
+              FUSION<span class="text-cyan">FRAMES</span>
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Transforming ordinary footage into extraordinary stories with cutting-edge video editing technology.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="footer-link">Home</a>
+              </li>
+              <li>
+                <a href="services.html" class="footer-link">Services</a>
+              </li>
+              <li>
+                <a href="contact.html" class="footer-link">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Projects</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">About Us</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center text-gray-300 hover-text-cyan">
+                <i class="fas fa-envelope text-cyan mr-2"></i>
+                <a href="mailto:info@fusionframes.com">info@fusionframes.com</a>
+              </li>
+              <li class="flex items-center text-gray-300 hover-text-cyan">
+                <i class="fas fa-phone-alt text-cyan mr-2"></i>
+                <a href="tel:+1234567890">(123) 456-7890</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-cyan-10">
+          <p class="text-center text-gray-400 text-sm">
+            © <span id="current-year"></span> Fusion Frames. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Additional CSS for process steps -->
+  <style>
+    .process-step {
+      background-color: rgba(26, 31, 44, 0.5);
+      backdrop-filter: blur(4px);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(126, 173, 207, 0.1);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .process-step:hover {
+      border-color: rgba(200, 178, 115, 0.3);
+      transform: translateY(-5px);
+    }
+    
+    .process-number {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgba(200, 178, 115, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .process-step:hover .process-number {
+      color: rgba(200, 178, 115, 0.4);
+    }
+  </style>
+
+  <!-- Include JavaScript files -->
+  <script src="main.js"></script>
+</body>
+</html>
